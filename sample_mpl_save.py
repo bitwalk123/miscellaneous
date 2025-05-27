@@ -1,3 +1,5 @@
+# This is based on the following sample:
+# https://matplotlib.org/stable/users/getting_started/
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -6,4 +8,9 @@ y = np.sin(x)
 
 fig, ax = plt.subplots()
 ax.plot(x, y)
+
+c = fig.canvas
+ext = c.get_default_filetype()
+c.get_default_filename = lambda: f"Untitled.{ext}"
+
 plt.show()
