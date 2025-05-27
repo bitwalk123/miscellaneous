@@ -9,6 +9,7 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 ax.plot(x, y)
 
+# デフォルトのファイル名を Untitled に設定
 c = fig.canvas
 ext = c.get_default_filetype()
 c.get_default_filename = lambda: f"Untitled.{ext}"
